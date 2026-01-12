@@ -102,7 +102,7 @@ def analyze_video(video_url: str) -> dict:
         4. 处理文本内容（评论、弹幕）
         5. 生成最终报告
     """
-    pass
+    ...
 ```
 
 #### 3. 处理器层
@@ -323,12 +323,23 @@ Main responsibilities:
 Core methods:
 ```python
 def analyze_video(video_url: str) -> dict:
-    """Main analysis workflow"""
-    # 1. Parse BV number
-    # 2. Fetch video information
-    # 3. Process video content (download, analyze)
-    # 4. Process text content (comments, danmaku)
-    # 5. Generate final report
+    """
+    Analyze Bilibili video and generate report
+    
+    Args:
+        video_url: Bilibili video URL or BV number
+    
+    Returns:
+        Dictionary containing analysis results
+    
+    Workflow:
+        1. Parse BV number
+        2. Fetch video information
+        3. Process video content (download, analyze)
+        4. Process text content (comments, danmaku)
+        5. Generate final report
+    """
+    ...
 ```
 
 #### 3. Processor Layer
