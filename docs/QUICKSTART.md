@@ -63,6 +63,8 @@ python gui.py
    ```
    BV1xx411c7mD
    ```
+   
+   > 注意: 请使用真实存在的 BV 号进行测试。上面的示例仅为格式说明。
 
 2. 点击"🔍 开始分析"按钮
 
@@ -233,6 +235,8 @@ python gui.py
    ```
    BV1xx411c7mD
    ```
+   
+   > Note: Please use a real BV number for testing. The example above is for format reference only.
 
 2. Click the "🔍 Start Analysis" button
 

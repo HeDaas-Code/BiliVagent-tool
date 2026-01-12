@@ -318,8 +318,14 @@ BiliVagent-tool/
 ├── gui.py                   # GUI 主入口
 ├── requirements.txt         # Python 依赖
 ├── .env.example            # 配置文件示例
+├── CONTRIBUTING.md         # 中文贡献指南
+├── CONTRIBUTING_EN.md      # 英文贡献指南
+├── CHANGELOG.md            # 更新日志
 ├── README.md               # 中文文档
-└── README_EN.md            # 英文文档
+├── README_EN.md            # 英文文档
+└── docs/                    # 额外文档
+    ├── ARCHITECTURE.md      # 架构文档
+    └── QUICKSTART.md        # 快速开始
 ```
 
 ## 工作流程

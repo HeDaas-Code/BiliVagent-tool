@@ -318,8 +318,14 @@ BiliVagent-tool/
 ├── gui.py                   # GUI entry point
 ├── requirements.txt         # Python dependencies
 ├── .env.example            # Configuration file example
+├── CONTRIBUTING.md         # Chinese contributing guide
+├── CONTRIBUTING_EN.md      # English contributing guide
+├── CHANGELOG.md            # Changelog
 ├── README.md               # Chinese documentation
-└── README_EN.md            # English documentation
+├── README_EN.md            # English documentation
+└── docs/                    # Additional documentation
+    ├── ARCHITECTURE.md      # Architecture documentation
+    └── QUICKSTART.md        # Quick start guide
 ```
 
 ## Workflow
