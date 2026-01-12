@@ -4,6 +4,13 @@
 
 基于 Python 和 LangChain 的 Bilibili 视频智能分析工具
 
+## 文档
+
+- 📖 [快速开始](docs/QUICKSTART.md)
+- 🏗️ [架构文档](docs/ARCHITECTURE.md)
+- 🤝 [贡献指南](CONTRIBUTING.md)
+- 📝 [更新日志](CHANGELOG.md)
+
 ## 简介
 
 BiliVagent 是一个智能分析 Bilibili 视频的工具，使用 SiliconFlow API 提供的大语言模型支持，能够自动完成视频下载、内容分析、评论分析等多项任务，最终生成详细的视频分析报告。
