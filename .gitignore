@@ -218,3 +218,5 @@ models/
 *.jpg
 *.png
 *_report.json
+/ffmpeg/
+/model/

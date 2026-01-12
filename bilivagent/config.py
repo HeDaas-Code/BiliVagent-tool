@@ -14,15 +14,24 @@ class Config:
     
     # Models
     LLM_MODEL = os.getenv("LLM_MODEL", "Qwen/Qwen2.5-32B-Instruct")
-    VLM_MODEL = os.getenv("VLM_MODEL", "Qwen/Qwen2-VL-7B-Instruct")
-    
+    VLM_MODEL = os.getenv("VLM_MODEL", "OpenGVLab/InternVL2-26B")
+
     # Vosk
-    VOSK_MODEL_PATH = os.getenv("VOSK_MODEL_PATH", "./models/vosk-model-cn-0.22")
-    
+    VOSK_MODEL_PATH = os.getenv("VOSK_MODEL_PATH", "./model/vosk-model-cn-0.22")
+
     # Directories
     OUTPUT_DIR = os.getenv("OUTPUT_DIR", "./output")
     TEMP_DIR = os.getenv("TEMP_DIR", "./temp")
     
+    # Debug mode - show detailed info like transcription
+    DEBUG = os.getenv("DEBUG", "true").lower() in ("true", "1", "yes")
+
+    @classmethod
+    def debug_print(cls, *args, **kwargs):
+        """Print only when DEBUG mode is enabled"""
+        if cls.DEBUG:
+            print(*args, **kwargs)
+
     @classmethod
     def validate(cls):
         """Validate required configuration"""

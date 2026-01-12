@@ -40,7 +40,7 @@ def main():
         help="跳过视频下载（仅分析评论和弹幕）",
         action="store_true"
     )
-    
+
     args = parser.parse_args()
     
     try:

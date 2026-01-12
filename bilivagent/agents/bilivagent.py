@@ -2,10 +2,11 @@
 import os
 import json
 from typing import Dict
-from langchain.agents import Tool, AgentExecutor, create_react_agent
-from langchain.prompts import PromptTemplate
-from langchain_community.llms.base import LLM
-from langchain.callbacks.manager import CallbackManagerForLLMRun
+from langchain_classic.agents import AgentExecutor, create_react_agent
+from langchain_core.tools import Tool
+from langchain_core.prompts import PromptTemplate
+from langchain_core.language_models.llms import LLM
+from langchain_core.callbacks.manager import CallbackManagerForLLMRun
 from typing import Optional, List, Any
 
 from bilivagent.config import Config
