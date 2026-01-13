@@ -1,6 +1,15 @@
 # BiliVagent-tool
 
+中文 | [English](README_EN.md)
+
 基于 Python 和 LangChain 的 Bilibili 视频智能分析工具
+
+## 文档
+
+- 📖 [快速开始](docs/QUICKSTART.md)
+- 🏗️ [架构文档](docs/ARCHITECTURE.md)
+- 🤝 [贡献指南](CONTRIBUTING.md)
+- 📝 [更新日志](CHANGELOG.md)
 
 ## 简介
 
@@ -45,6 +54,28 @@ BiliVagent 是一个智能分析 Bilibili 视频的工具，使用 SiliconFlow A
 - 讨论情感
 - 讨论关键词
 - 相关讨论
+
+## 图形界面
+
+项目现已包含基于 Tkinter 的用户友好型图形界面，提供：
+
+- **可视化输入**：轻松输入视频链接或 BV 号
+- **实时进度**：实时查看分析进度
+- **多标签显示**：日志和报告分标签显示
+- **报告导出**：将分析报告保存为 JSON 或文本文件
+- **状态指示**：清晰的分析状态视觉反馈
+
+### 使用图形界面
+
+```bash
+python gui.py
+```
+
+图形界面提供：
+- 📋 **运行日志标签**：实时分析过程日志
+- 📊 **分析报告标签**：格式化的分析结果
+- 💾 **保存功能**：导出报告到文件
+- 🗑 **清空功能**：清空日志以进行新的分析
 
 ## 安装
 
@@ -123,7 +154,9 @@ TEMP_DIR=./temp
 
 ## 使用方法
 
-### 基本用法
+### 命令行界面
+
+#### 基本用法
 
 ```bash
 # 使用 BV 号
@@ -133,7 +166,7 @@ python main.py BV1xx411c7mD
 python main.py https://www.bilibili.com/video/BV1xx411c7mD
 ```
 
-### 命令行参数
+#### 命令行参数
 
 ```bash
 python main.py [-h] [-o OUTPUT] [--no-download] video
@@ -147,6 +180,21 @@ python main.py [-h] [-o OUTPUT] [--no-download] video
                         输出目录（默认: ./output）
   --no-download         跳过视频下载（仅分析评论和弹幕）
 ```
+
+### 图形界面
+
+启动图形界面：
+
+```bash
+python gui.py
+```
+
+功能特性：
+1. 在输入框中输入视频 URL 或 BV 号
+2. 点击"🔍 开始分析"按钮
+3. 在日志标签中查看实时进度
+4. 在报告标签中查看格式化报告
+5. 使用"💾 保存报告"按钮保存报告
 
 ### 示例输出
 
@@ -240,6 +288,7 @@ BV号: BV1xx411c7mD
 - **jieba**: 中文分词与关键词提取
 - **bilibili-api-python**: Bilibili API 接口
 - **yt-dlp**: 视频下载工具
+- **Tkinter**: GUI 框架
 
 ### 项目结构
 
@@ -265,10 +314,18 @@ BiliVagent-tool/
 ├── models/                  # 模型文件目录
 ├── output/                  # 输出目录
 ├── temp/                    # 临时文件目录
-├── main.py                  # 主入口
+├── main.py                  # CLI 主入口
+├── gui.py                   # GUI 主入口
 ├── requirements.txt         # Python 依赖
 ├── .env.example            # 配置文件示例
-└── README.md               # 项目文档
+├── CONTRIBUTING.md         # 中文贡献指南
+├── CONTRIBUTING_EN.md      # 英文贡献指南
+├── CHANGELOG.md            # 更新日志
+├── README.md               # 中文文档
+├── README_EN.md            # 英文文档
+└── docs/                    # 额外文档
+    ├── ARCHITECTURE.md      # 架构文档
+    └── QUICKSTART.md        # 快速开始
 ```
 
 ## 工作流程
@@ -339,6 +396,14 @@ A: 请确认已下载 Vosk 模型并正确配置 VOSK_MODEL_PATH。
 
 A: 当前版本暂不支持批量处理，建议使用脚本循环调用。
 
+### Q: 图形界面无法启动？
+
+A: 请确保已安装 Tkinter。在 Linux 上可能需要安装：`sudo apt-get install python3-tk`
+
+### Q: 如何更改分析语言？
+
+A: 分析结果的语言由 LLM 模型决定。您可以在代码中修改提示词来调整输出语言。
+
 ## 许可证
 
 本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
@@ -347,9 +412,15 @@ A: 当前版本暂不支持批量处理，建议使用脚本循环调用。
 
 欢迎提交 Issue 和 Pull Request！
 
+请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 了解贡献指南。
+
 ## 致谢
 
 - [SiliconFlow](https://siliconflow.cn) 提供的 API 服务
 - [Vosk](https://alphacephei.com/vosk/) 语音识别引擎
 - [bilibili-api-python](https://github.com/Nemo2011/bilibili-api) Bilibili API 库
 - [LangChain](https://github.com/langchain-ai/langchain) Agent 框架
+
+## 更新日志
+
+查看 [CHANGELOG.md](CHANGELOG.md) 了解版本历史和更新内容。
